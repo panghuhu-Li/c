@@ -142,6 +142,14 @@ int ListDelete(LinkedList* list, int index) {
     return 1;
 }
 
+/**
+ * @brief 根据下标插入节点
+ * 
+ * @param list 
+ * @param element 插入的元素
+ * @param index 要插入的下标
+ * @return int 插入成功返回1，插入失败返回0
+ */
 int ListInsert(LinkedList* list, elementType element, int index) {
     LinkedList* current = list;
     LinkedList* node = (LinkedList*)malloc(sizeof(LinkedList));
@@ -161,6 +169,12 @@ int ListInsert(LinkedList* list, elementType element, int index) {
     return 1;
 }
 
+/**
+ * @brief 链表销毁，从头结点开始以此向下销毁已删除的节点
+ * 
+ * @param list 
+ * @return int 销毁成功则返回1
+ */
 int ListDertory(LinkedList* list){
     int number=1;
     LinkedList* current=list->next;
